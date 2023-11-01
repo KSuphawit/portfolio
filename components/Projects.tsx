@@ -16,7 +16,7 @@ function Projects({ projects }: Props) {
       transition={{ duration: 1.5 }}
       className="flex relative overflow-hidden flex-col text-left md:flex-row max-w-full h-screen justify-evenly mx-auto items-center z-0"
     >
-      <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl">
+      <h3 className="absolute top-24 uppercase tracking-[10px] md:tracking-[20px] text-gray-500 text-xl md:text-2xl">
         Projects
       </h3>
 
@@ -24,7 +24,7 @@ function Projects({ projects }: Props) {
         {projects.map((project, i) => (
           <motion.div
             key={project._id}
-            className="w-screen flex flex-col space-y-5 items-center justify-center flex-shrink-0 snap-center p-20 md:p-44 h-screen"
+            className="w-screen flex flex-col space-y-5 items-center justify-center flex-shrink-0 snap-center p-8 md:p-44 h-screen"
           >
             <Link key={project._id} href={project.linkToBuild}>
               <motion.img
@@ -35,29 +35,26 @@ function Projects({ projects }: Props) {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 src={urlFor(project?.image).url()}
-                className="md:mb-0 flex-shrink-0 w-56 h-56 rounded-full md:rounded-lg md:w-64 md:h-96 xl:w-[500px] xl:h-[300px] object-contain cursor-pointer"
+                className="md:mb-0 flex-shrink-0 w-80 h-64 rounded-lg md:w-64 md:h-96 xl:w-[500px] xl:h-[300px] object-contain cursor-pointer"
               />
             </Link>
 
-            <div className="space-y-10 px-0 md:px-10 max-w-6xl">
-              <h4 className="text-md md:text-4xl font-semibold text-center">
-                <span className="decoration-[#F7AB0A]/50 underline">
-                  Case Study {i + 1} of {projects.length}:
-                </span>{" "}
+            <div className="space-y-4 md:space-y-10 px-0 md:px-10 max-w-6xl">
+              <h4 className="text-xl md:text-4xl decoration-[#F7AB0A] underline font-semibold text-center">
                 {project.title}
               </h4>
 
               <div className="flex items-center space-x-2 justify-center">
                 {project?.technologies.map((technology) => (
                   <img
-                    className="h-10 w-10 rounded-full"
+                    className="h-10 w-10 md:h-12 md:w-12 rounded-full"
                     key={technology._id}
                     src={urlFor(technology.image).url()}
                   />
                 ))}
               </div>
 
-              <p className="textsm md:text-lg text-center md:text-left">
+              <p className="text-sm md:text-lg text-center md:text-left">
                 {project.summary}
               </p>
             </div>
