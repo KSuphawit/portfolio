@@ -23,10 +23,10 @@ function ExperienceCard({ experience }: Props) {
       />
 
       <div className="px-0 md:px-10 ">
-        <h4 className="text-lg md:text-4xl font-light">
+        <h4 className="text-lg md:text-2xl font-light">
           {experience.jobTitle}
         </h4>
-        <p className="font-bold text-md md:text-2xl mt-1">
+        <p className="font-bold text-base md:text-lg mt-1">
           {experience.company}
         </p>
         <div className="flex space-x-2 my-2">
@@ -39,14 +39,14 @@ function ExperienceCard({ experience }: Props) {
           ))}
         </div>
 
-        <p className="uppercase text-xs md:text-lg py-5 text-gray-300">
+        <p className="uppercase text-sm md:text-base py-5 text-gray-300">
           {new Date(experience.dateStarted).toDateString()} -{" "}
           {experience.isCurrentlyWorkingHere
             ? "Present"
             : new Date(experience.dateEnded).toDateString()}
         </p>
 
-        <ul className="list-disc space-y-4 ml-5 text-xs md:text-base">
+        <ul className="list-disc space-y-4 ml-5 text-xs md:text-sm">
           {experience.points.map((point, i) => (
             <li key={i}>{point}</li>
           ))}
