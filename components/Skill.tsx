@@ -16,7 +16,6 @@ function Skill({ skill, directionLeft }: Props) {
       }}
       transition={{ duration: 1 }}
       whileInView={{ opacity: 1, x: 0 }}
-      viewport={{ once: true }}
       className="group relative flex cursor-pointer"
     >
       <img
