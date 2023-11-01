@@ -31,36 +31,39 @@ function ContactMe({ pageInfo }: Props) {
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1.5 }}
-      className="flex relative flex-col text-center md:text-left md:flex-row max-w-7xl px-10 h-screen justify-evenly mx-auto items-center"
+      className="flex relative flex-col text-center md:text-left md:flex-row max-w-7xl md:px-10 h-screen justify-evenly mx-auto items-center"
     >
-      <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl">
+      <h3 className="absolute top-24 uppercase tracking-[10px] md:tracking-[20px] text-gray-500 text-xl md:text-2xl">
         Contact
       </h3>
 
-      <div className="flex flex-col space-y-10">
-        <h4 className="text-4xl font-semibold text-center">
-          I have got just what you need.{" "}
+      <div className="flex flex-col space-y-4 md:space-y-10">
+        <h4 className="text-base md:text-4xl font-semibold text-center">
+          Whether you have questions!{" "}
           <span className="decoration-[#F7AB0A]/50 underline">Lets Talk.</span>
         </h4>
 
-        <div className="space-y-10">
-          <div className="flex items-center space-x-5 justify-center">
+        <div className="space-y-4 md:space-y-10">
+          <div className="flex items-center space-x-2 md:space-x-5 justify-center">
             <EnvelopeIcon className="text-[#F7AB0A] h-7 w-7 animate-pulse" />
-            <a className="text-2xl" href={`mailto:${pageInfo.email}`}>
+            <a
+              className="text-sm md:text-2xl"
+              href={`mailto:${pageInfo.email}`}
+            >
               {pageInfo.email}
             </a>
           </div>
-          <div className="flex items-center space-x-5 justify-center">
+          <div className="flex items-center space-x-2 md:space-x-5 justify-center">
             <MapPinIcon className="text-[#F7AB0A] h-7 w-7 animate-pulse" />
-            <p className="text-2xl">{pageInfo.address}</p>
+            <p className="text-sm md:text-2xl">{pageInfo.address}</p>
           </div>
         </div>
 
         <form
           onSubmit={handleSubmit(onSubmit)}
-          className="flex flex-col space-y-2 w-fit mx-auto"
+          className="flex flex-col space-y-2 w-full md:w-fit mx-auto"
         >
-          <div className="flex space-x-2">
+          <div className="flex flex-col space-y-2 md:flex-row md:space-x-2 md:space-y-0">
             <input
               className="contactInput"
               placeholder="Name"

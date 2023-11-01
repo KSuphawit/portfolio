@@ -24,7 +24,7 @@ function Projects({ projects }: Props) {
         {projects.map((project, i) => (
           <motion.div
             key={project._id}
-            className="w-screen flex flex-col space-y-5 items-center justify-center flex-shrink-0 snap-center p-8 md:p-44 h-screen"
+            className="w-screen flex flex-col space-y-5 items-center justify-center flex-shrink-0 snap-center p-8 md:p-28 h-screen"
           >
             <Link key={project._id} href={project.linkToBuild}>
               <motion.img
@@ -35,7 +35,7 @@ function Projects({ projects }: Props) {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 src={urlFor(project?.image).url()}
-                className="md:mb-0 flex-shrink-0 w-80 h-64 rounded-lg md:w-64 md:h-96 xl:w-[500px] xl:h-[300px] object-contain cursor-pointer"
+                className="md:mb-0 flex-shrink-0 w-80 h-64 rounded-lg md:w-[500px] md:h-[400px] object-contain cursor-pointer"
               />
             </Link>
 
@@ -54,7 +54,7 @@ function Projects({ projects }: Props) {
                 ))}
               </div>
 
-              <p className="text-sm md:text-lg text-center md:text-left">
+              <p className="text-sm md:text-xl text-center md:text-left">
                 {project.summary}
               </p>
             </div>
