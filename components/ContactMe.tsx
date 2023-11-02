@@ -31,14 +31,14 @@ function ContactMe({ pageInfo }: Props) {
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1.5 }}
-      className="relative flex flex-col justify-evenly gap-4 text-center max-w-7xl md:px-10 h-screen mx-auto items-center"
+      className="relative flex flex-col justify-evenly gap-4 text-center max-w-7xl py-16 md:px-10 h-screen mx-auto items-center"
     >
       <h3 className="top-24 uppercase tracking-[0.625rem] md:tracking-[1.25rem] text-gray-500 text-xl md:text-2xl">
         Contact
       </h3>
 
       <div className="flex flex-col justify-center w-5/6 space-y-4 md:space-y-10">
-        <h4 className="text-xl md:text-4xl font-semibold text-center">
+        <h4 className="text-lg md:text-4xl font-semibold text-center">
           Simply want to say hello.{" "}
           <span className="decoration-[#F7AB0A]/50 underline">Lets Talk!</span>
         </h4>

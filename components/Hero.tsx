@@ -14,7 +14,7 @@ function Hero({ pageInfo }: Props) {
     words: [
       `Hi, The name's ${pageInfo?.name}`,
       "Guy-who-loves-Coding",
-      "<ButLovesToSleepMore />",
+      "Oh! I love sleep more XD",
     ],
     loop: true,
     delaySpeed: 2000,
