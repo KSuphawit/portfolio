@@ -9,7 +9,7 @@ type Props = {
 
 function ExperienceCard({ experience }: Props) {
   return (
-    <article className="flex flex-col rounded-lg items-center space-y-7 flex-shrink-0 w-[320px] md:w-[600px] xl:w-[900px] snap-center bg-[#292929] p-10 hover:opacity-100 opacity-40 cursor-pointer transition-opacity duration-200 overflow-hidden">
+    <article className="flex flex-col rounded-lg items-center space-y-7 flex-shrink-0 w-[25rem] md:w-[37.5rem] xl:w-[56.25rem] snap-center bg-[#292929] p-6 hover:opacity-100 opacity-40 cursor-pointer transition-opacity duration-200 overflow-hidden">
       <motion.img
         initial={{
           y: -100,
@@ -19,16 +19,12 @@ function ExperienceCard({ experience }: Props) {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         src={urlFor(experience.companyImage).url()}
-        className="w-24 h-24 md:w-32 md:h-32 rounded-full md:rounded-full xl:w-[200px] xl:h-[200px] object-cover object-center"
+        className="w-28 h-28 md:w-32 md:h-32 lg:w-36 lg:h-36 rounded-full object-cover object-center"
       />
 
       <div className="px-0 md:px-10 ">
-        <h4 className="text-lg md:text-2xl font-light">
-          {experience.jobTitle}
-        </h4>
-        <p className="font-bold text-base md:text-lg mt-1">
-          {experience.company}
-        </p>
+        <h4 className="text-2xl font-light">{experience.jobTitle}</h4>
+        <p className="text-xl font-bold  mt-1">{experience.company}</p>
         <div className="flex space-x-2 my-2">
           {experience.technologies.map((technology) => (
             <img
@@ -39,7 +35,7 @@ function ExperienceCard({ experience }: Props) {
           ))}
         </div>
 
-        <p className="uppercase text-sm md:text-base py-5 text-gray-300">
+        <p className="uppercase text-base md:text-lg py-5 text-gray-300">
           {new Date(experience.dateStarted).toDateString()} -{" "}
           {experience.isCurrentlyWorkingHere
             ? "Present"

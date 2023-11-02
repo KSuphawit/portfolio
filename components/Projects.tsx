@@ -14,7 +14,7 @@ function Projects({ projects }: Props) {
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1.5 }}
-      className="flex relative overflow-hidden flex-col text-left md:flex-row max-w-full h-screen justify-evenly mx-auto items-center z-0"
+      className="flex relative overflow-hidden flex-col text-left max-w-full h-screen justify-evenly mx-auto items-center z-0"
     >
       <h3 className="absolute top-24 uppercase tracking-[10px] md:tracking-[20px] text-gray-500 text-xl md:text-2xl">
         Projects
@@ -35,26 +35,16 @@ function Projects({ projects }: Props) {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 src={urlFor(project?.image).url()}
-                className="md:mb-0 flex-shrink-0 w-80 h-64 rounded-lg md:w-[500px] md:h-[400px] object-contain cursor-pointer"
+                className="md:mb-0 flex-shrink-0 w-64 h-64 md:w-64 md:h-96 xl:w-[500px] xl:h-[300px] rounded-lg object-contain cursor-pointer"
               />
             </Link>
 
-            <div className="space-y-4 md:space-y-10 px-0 md:px-10 max-w-6xl">
-              <h4 className="text-xl md:text-4xl decoration-[#F7AB0A] underline font-semibold text-center">
+            <div className="space-y-10 px-0 md:px-10 max-w-6xl">
+              <h4 className="text-2xl font-semibold text-center">
                 {project.title}
               </h4>
 
-              <div className="flex items-center space-x-2 justify-center">
-                {project?.technologies.map((technology) => (
-                  <img
-                    className="h-10 w-10 md:h-12 md:w-12 rounded-full"
-                    key={technology._id}
-                    src={urlFor(technology.image).url()}
-                  />
-                ))}
-              </div>
-
-              <p className="text-sm md:text-xl text-center md:text-left">
+              <p className="text-base md:text-lg text-center md:text-left">
                 {project.summary}
               </p>
             </div>

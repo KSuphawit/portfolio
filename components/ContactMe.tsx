@@ -31,23 +31,23 @@ function ContactMe({ pageInfo }: Props) {
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1.5 }}
-      className="flex relative flex-col text-center md:text-left md:flex-row max-w-7xl md:px-10 h-screen justify-evenly mx-auto items-center"
+      className="relative flex flex-col justify-evenly gap-4 text-center max-w-7xl md:px-10 h-screen mx-auto items-center"
     >
-      <h3 className="absolute top-24 uppercase tracking-[10px] md:tracking-[20px] text-gray-500 text-xl md:text-2xl">
+      <h3 className="top-24 uppercase tracking-[0.625rem] md:tracking-[1.25rem] text-gray-500 text-xl md:text-2xl">
         Contact
       </h3>
 
       <div className="flex flex-col justify-center w-5/6 space-y-4 md:space-y-10">
-        <h4 className="text-base md:text-4xl font-semibold text-center">
+        <h4 className="text-xl md:text-4xl font-semibold text-center">
           Simply want to say hello.{" "}
           <span className="decoration-[#F7AB0A]/50 underline">Lets Talk!</span>
         </h4>
 
-        <div className="space-y-4 md:space-y-10">
+        <div className="space-y-6 md:space-y-10">
           <div className="flex items-center space-x-2 md:space-x-5 justify-center">
             <EnvelopeIcon className="text-[#F7AB0A] h-7 w-7 animate-pulse" />
             <a
-              className="text-sm md:text-2xl"
+              className="text-base md:text-2xl"
               href={`mailto:${pageInfo.email}`}
             >
               {pageInfo.email}
@@ -55,7 +55,7 @@ function ContactMe({ pageInfo }: Props) {
           </div>
           <div className="flex items-center space-x-2 md:space-x-5 justify-center">
             <MapPinIcon className="text-[#F7AB0A] h-7 w-7 animate-pulse" />
-            <p className="text-sm md:text-2xl">{pageInfo.address}</p>
+            <p className="text-base md:text-2xl">{pageInfo.address}</p>
           </div>
         </div>
 
