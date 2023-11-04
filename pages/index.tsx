@@ -27,7 +27,7 @@ const Home = ({ projects, skills, pageInfo, experiences, socials }: Props) => {
   return (
     <div className="snap-y snap-mandatory h-screen overflow-y-scroll overflow-x-hidden scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80 bg-[rgb(36,36,36)] text-white z-0 scroll-smooth">
       <Head>
-        <title>{`${pageInfo?.name}'s site`}</title>
+        <title>{`${pageInfo?.name}'s Personal Site`}</title>
       </Head>
       <Header socials={socials} />
 
