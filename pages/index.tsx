@@ -55,17 +55,17 @@ const Home = ({ projects, skills, pageInfo, experiences, socials }: Props) => {
         <ContactMe pageInfo={pageInfo} />
       </section>
 
-      <Link href="#hero" scroll={false}>
-        <footer className="sticky bottom-5 w-full cursor-pointer">
-          <div className="flex items-center justify-center">
+      <footer className="sticky bottom-5 w-full cursor-pointer">
+        <div className="flex items-center justify-center">
+          <Link href="#hero" scroll={false}>
             <img
               className="h-10 w-10 rounded-full filter grayscale hover:grayscale-0 cursor-pointer"
               src="chevron-up.png"
               alt="chevron-up"
             />
-          </div>
-        </footer>
-      </Link>
+          </Link>
+        </div>
+      </footer>
     </div>
   );
 };
